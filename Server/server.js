@@ -11,7 +11,7 @@ import { app, server } from "./Socket.js";
 const PORT = 5000
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://baatein-realtime-chat-frontend.onrender.com',
     credentials: true
 }))
 app.use(express.json())
