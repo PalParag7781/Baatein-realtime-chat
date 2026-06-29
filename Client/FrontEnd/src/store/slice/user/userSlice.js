@@ -128,7 +128,7 @@ const userSlice = createSlice({
 
                 state.screenLoading = false
 
-                state.userProfile = action.payload
+                state.userProfile = action.payload.user
 
                 state.isAuthenticated = true
             })
