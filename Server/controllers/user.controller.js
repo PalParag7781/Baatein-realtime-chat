@@ -185,10 +185,18 @@ export const getProfile = async (req, res) => {
                 message: "User not found"
             })
         }
+           const safeUser = {
+            _id: profile._id,
+            fullName: profile.fullName,
+            userName: profile.userName,
+            gender: profile.gender,
+            avatar: profile.avatar
+        };
         res.status(200).json({
             success: true,
-            responseData: profile,
+            user: safeUser,
         });
+        
     } catch (error) {
         console.log(error);
         return res.status(500).json({
