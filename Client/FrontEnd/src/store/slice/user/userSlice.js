@@ -72,7 +72,7 @@ const userSlice = createSlice({
                 state.buttonLoading = false
 
                 state.userProfile = action.payload.user
-                state.isAuthenticated = false
+                
 
             })
 
